@@ -3,7 +3,7 @@ import mysql.connector
 from sqlalchemy import create_engine
 
 df = pd.read_csv('FMEL_Dataset.csv')
-engine = create_engine('mysql+mysqlconnector://root:Chisca123!@localhost:3306/Giraffe', echo=False)
+engine = create_engine('mysql+mysqlconnector://root:PASSWORD@localhost:3306/Giraffe', echo=False)
 
 df.to_sql(name='test2', con=engine, if_exists = 'append', index=False)
 
